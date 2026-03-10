@@ -1,0 +1,223 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+/* Estilização da tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #0c3b6b;
+    color: white;
+    font-weight: bold;
+}
+
+.fornecedor-column {
+    text-align: left;
+    font-weight: bold;
+}
+
+.check-column {
+    width: 120px;
+}
+
+/* Cores de fundo para as linhas */
+.yellow-row {
+    background-color: #ffffcc;
+}
+
+.green-row {
+    background-color: #e6ffe6;
+}
+
+.purple-row {
+    background-color: #e6e6fa;
+}
+
+/* Estilização dos checkboxes */
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 2px solid #0c3b6b;
+    border-radius: 4px;
+    outline: none;
+    position: relative;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #0c3b6b;
+}
+
+input[type="checkbox"]:checked::after {
+    content: '✓';
+    font-size: 16px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Classes para marcar checkboxes como verificados visualmente */
+.checked {
+    background-color: #4CAF50;
+}
+
+/* Botões */
+.buttons {
+    margin: 20px 0;
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #0c3b6b;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0a2e50;
+}
+
+#resetBtn {
+    background-color: #f44336;
+}
+
+#resetBtn:hover {
+    background-color: #d32f2f;
+}
+
+/* Resumo */
+.summary {
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+.summary p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+/* Célula especial para o * */
+#special-mark-1::after,
+#special-mark-2::after {
+    content: "*";
+    position: relative;
+    top: -5px;
+    left: 5px;
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+        margin: 10px;
+        width: auto;
+    }
+    
+    table {
+        font-size: 14px;
+    }
+    
+    th, td {
+        padding: 5px;
+    }
+    
+    .check-column {
+        width: 60px;
+    }
+}
+
+/* Responsividade para mobile */
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 5px;
+        margin: 5px;
+    }
+    
+    table {
+        font-size: 12px;
+    }
+    
+    th, td {
+        padding: 4px 2px;
+    }
+    
+    .check-column {
+        width: 40px;
+    }
+    
+    .fornecedor-column {
+        max-width: 150px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .buttons {
+        flex-direction: column;
+    }
+    
+    button {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    
+    /* Orientação para rotação do celular */
+    .rotate-notice {
+        display: block;
+        text-align: center;
+        margin: 10px 0;
+        padding: 8px;
+        background-color: #fff3cd;
+        border-radius: 4px;
+        border: 1px solid #ffeeba;
+        color: #856404;
+    }
+}
+
+#resultado {
+    color: #0e9b13;
+    font-size: 16px;
+    font-weight: bold;
+}
